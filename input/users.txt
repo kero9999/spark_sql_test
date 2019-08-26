@@ -1,0 +1,3 @@
+zhangsan,11,男
+lisi,22
+wangwu,44,女
