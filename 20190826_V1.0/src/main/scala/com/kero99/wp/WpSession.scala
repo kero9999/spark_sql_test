@@ -12,6 +12,7 @@ import org.apache.spark.sql.SparkSession
 class WpSession extends App {
   val session = SparkSession.builder().appName(getClass.getSimpleName)
     .master("local[*]")
+    .enableHiveSupport()
     .getOrCreate()
   val sc = session.sparkContext
   sc.setLogLevel("WARN")
