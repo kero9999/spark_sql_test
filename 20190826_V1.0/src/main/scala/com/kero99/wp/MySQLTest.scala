@@ -19,15 +19,22 @@ object MySQLTest extends WpSession {
 //  df.show
 
 
+//  val df = session.read.format("jdbc").options(
+//    Map(
+//      "url"->"jdbc:mysql://192.168.52.42:3306/d1903",
+//      "user"->"root",
+//      "password"->"root",
+//      "dbtable"->"ob_emp"
+//    )).load()
   val df = session.read.format("jdbc").options(
     Map(
-      "url"->"jdbc:mysql://192.168.52.42:3306/d1903",
-      "user"->"root",
-      "password"->"root",
+      "driver"->"org.apache.hive.jdbc.HiveDriver",
+      "url"->"jdbc:hive2://192.168.1.132:10000/yzx",
+      "user"->"hdfs",
+      "password"->"hdfs",
       "dbtable"->"ob_emp"
     )).load()
+  df.select("*").show
 
-
-  df.show
 
 }

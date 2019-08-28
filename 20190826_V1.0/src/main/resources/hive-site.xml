@@ -7,7 +7,7 @@
 	</property>
         <property>
                 <name>javax.jdo.option.ConnectionURL</name>
-                <value>jdbc:mysql://apache01:3306/hive?createDatabaseIfNotExist=true</value>
+                <value>jdbc:mysql://192.168.1.131:3306/hive?createDatabaseIfNotExist=true</value>
         </property>
         <property>
                 <name>javax.jdo.option.ConnectionDriverName</name>
@@ -30,15 +30,7 @@
  		<value>true</value> 
 	</property>
 	<property>
-          	<name>hive.zookeeper.quorum</name>
-     		<value>apache01,apache02,apache03</value>
-     	</property>
-	<property>
-     		<name>hive.zookeeper.port</name>
-     		<value>2181</value>
-	</property>
-	<property>
 		<name>hive.metastore.warehouse.dir</name>
-		<value>/user/hive/warehouse</value>
+		<value>/apps/hive/warehouse</value>
 	</property>
 </configuration>

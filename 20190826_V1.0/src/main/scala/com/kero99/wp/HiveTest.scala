@@ -7,5 +7,5 @@ package com.kero99.wp
   *
   */
 object HiveTest extends WpSession {
-  session.sql("select * from tb_rows").show
+  session.sql("select * from yzx.ob_emp").show
 }
